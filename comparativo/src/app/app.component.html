@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+  <span>{{title}}</span>
+</mat-toolbar>
+
+<mat-card>
+<div class="demo-description">De lo que has aprendido crea un cuadro comparativo. (Dar doble clic para Editar) </div>
+<p></p>
+<p></p>
+<smart-grid #grid id="grid" [dataSource]="dataSource" [columns]="columns" [editing]="editing"
+[dataExport]="dataExport"
+    [appearance]="appearance"></smart-grid>
+
+<p></p>
+<p></p>
+
+    <mat-divider></mat-divider>
+<section>
+    <div class="label">Columnas</div>
+    <div class="button-row">
+            <smart-button #button id="addColumn">
+              <button  mat-fab color="primary">
+                <mat-icon>add</mat-icon>
+              </button>
+            </smart-button>
+
+            <smart-button #button2 id="removeLastColumn">
+                <button  mat-fab color="warn">
+                  <mat-icon>remove</mat-icon>
+                </button>
+              </smart-button>
+    </div>
+</section>
+<section>
+    <div class="label">Filas</div>
+    <div class="button-row">
+            <smart-button #button3 id="addRow">
+              <button  mat-fab color="primary">
+                <mat-icon>add</mat-icon>
+              </button>
+            </smart-button>
+
+            <smart-button #button4 id="removeLastRow">
+                <button  mat-fab color="warn">
+                  <mat-icon>remove</mat-icon>
+                </button>
+              </smart-button>
+    </div>
+</section>
+
+
+</mat-card>
+<mat-divider></mat-divider>
+<mat-card>
+    <section>
+        <div class="label">Guardar</div>
+                <smart-button #button5 id="pdfBtn">
+                  <button  mat-fab color="primary">
+                    <mat-icon>save</mat-icon>
+                  </button>
+                </smart-button>
+    
+                <smart-button #printBtn id="printBtn">
+                    <button  mat-fab color="warn">
+                      <mat-icon>print</mat-icon>
+                    </button>
+                  </smart-button>
+
+    </section>
+</mat-card>
